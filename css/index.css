@@ -1,0 +1,347 @@
+body, div, h1, h2, h3, h4, h5, h5, p, ul, ol, li, dl, dt, dd
+{
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    list-style-type: none;
+}
+
+body {
+    font: 14px "Microsoft Yahei",Arial,Helvetica,sans-serif;
+    color: #515151;
+}
+.section {
+    text-align: center;
+    font: 50px "Microsoft Yahei";
+    background: url("../img/bg.jpg");
+}
+a {
+    color: #515151;
+    text-decoration: none;
+}
+
+
+.mlNav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    height: 45px;
+}
+#logo {
+    float: left;
+    margin-left: 120px;
+    position: absolute;
+}
+#logo img {
+    width: 58px;
+    height: 58px;
+    border-radius: 30px;
+    -webkit-transition: box-shadow 0.5s;
+    transition: box-shadow 0.5s;
+}
+#logo img:hover {
+    box-shadow: 0 0 15px #1FAEFF;
+}
+#ml_logo, #ml_p {
+    float: left;
+}
+#ml_p {
+    text-align: center;
+    color: #000;
+    font-weight: bolder;
+    font-size: 16px;
+}
+#ml_p1 {
+    margin: 0 15px 3px;
+    padding: 5px 15px;
+    width: 50px;
+    border-bottom: 2px solid #333;
+}
+#ml_p2 {
+    padding: 0 15px 3px;
+}
+.download {
+    position: absolute;
+    right: 130px;
+    top: 20px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color:
+    #3db1fa;
+    border-radius: 5px;
+}
+.download:hover {
+    color: black;
+}
+.section {
+    overflow: hidden;
+}
+.nav{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: #3db1fa;
+
+}
+.logo{
+    position: absolute;
+    margin-left: 150px;
+}
+.nav-ul{
+    position: absolute;
+    width: auto;
+    height: 45px;
+    line-height: 45px;
+    float:left;
+    margin-left: 1050px;
+
+}
+.nav-ul li {
+    font-size: 18px;
+    float: left;
+    margin: 0 20px;
+
+}
+.nav-ul a {
+    padding: 25px 0;
+    position: relative;
+    color: white;
+}
+.nav-ul li a:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    height: 2px;
+    background: white;
+    opacity: 0;
+    -webkit-transition: .2s ease-in;
+    transition: .2s ease-in;
+}
+.nav-ul li a:hover {
+    color: #000;
+}
+.nav-ul li a:hover:after {
+     left: 0;
+     right: 0;
+     opacity: 1;
+}
+.mlNav ul{
+    position: absolute;
+    width: auto;
+    height: 45px;
+    line-height: 45px;
+    float:left;
+    margin-left: 720px;
+}
+.mlNav ul li{
+    float: left;
+    margin: 0 20px;
+    font-weight: bolder;
+    font-size: 17px;
+}
+.mlNav ul li a{
+    padding: 25px 0;
+    position: relative;
+    color: black;
+}
+.mlNav li a:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    height: 2px;
+    background: #3db1fa;
+    opacity: 0;
+    -webkit-transition: .2s ease-in;
+    transition: .2s ease-in;
+}
+.mlNav li a:hover {
+    color: #3db1fa;
+}
+.mlNav li a:hover:after {
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+#index_img{
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+}
+#index_img img{
+    -webkit-border-radius: 100px;
+}
+#index_news1{
+    display: block;
+    width: 900px;
+    margin: 20px auto 0;
+    padding-bottom: 25px;
+    font-size: 24px;
+    color: #fafafa;
+    letter-spacing: 0;
+    text-shadow: 0 1px 0 #999, 0 2px 0 #888, 0 3px 0 #777, 0 4px 0 #666, 0 5px 0 #555, 0 6px 0 #444, 0 7px 0 #333, 0 8px 7px #001135 ;
+    border-bottom: 3px solid #999999;
+}
+#index_news_box{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#index_news_box p{
+    padding: 5px;
+}
+#about,#skill{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.title{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    font-size: 38px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: bolder;
+    margin-top: 150px;
+}
+.title_ex{
+    width: 0;
+    font-size: 24px;
+    margin: 3px auto;
+    padding:5px 0;
+    border-top: 2px solid red;
+    color: red;
+}
+#about_content{
+    width: 100%;
+    height: 600px;
+    margin-top: 250px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+}
+#about_ul{
+    width: 300px;
+    height: auto;
+    text-align: left;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 330px;
+    display:none;
+}
+#about_p{
+    width: 500px;
+    height: auto;
+    text-align: left;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 680px;
+    display:none;
+}
+.footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.slide ul{
+    list-style: outside none none;
+}
+.slide,.slide_panel,.slide_box{
+    width: 640px;
+    height: 320px;
+}
+.slide{
+    position: relative;
+    text-align: center;
+    margin-top: 120px;
+    margin-left: 360px;
+    margin-right: 360px;
+
+}
+.slide_panel,.slide_nav,.slide_pre,.slide_next{
+    position: absolute;
+    z-index:8;
+}
+.slide_box{
+    position: relative;
+}
+.slide_nav{
+    position: absolute;
+    margin-left: -51px;
+    left:50%;
+    bottom: 4px;
+}
+.slide_nav li{
+    font-size: 16px;
+    background: #3e3e3e;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 2px;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    width: 18px;
+}
+.slide_nav .slide_item_selected{
+    background: blue;
+
+}
+.slide_page a{
+    background: rgba(0,0,0,0.2);
+    color: #ffffff;
+    display: block;
+    font-size: 22px;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    margin-top: -31px;
+    position: absolute;
+    top: 50%;
+}
+.slide_page a:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+.slide_next {
+    left: 100%;
+    margin-left: -28px;
+}
+.footer-ul{
+    position: absolute;
+    width: 250px;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 1050px;
+
+}
+.footer-ul li {
+    font-size: 18px;
+    float: left;
+    padding: 0 5px;
+
+}
+.footer-ul a {
+    display: block;
+    color: #3db1fa;
+}
+.footer-ul a:hover{
+    color: black;
+}

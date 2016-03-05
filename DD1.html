@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>DD</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        $(function(){
+            var $mlNav = $(".mlNav");
+            $('#dowebok').fullpage({
+                css3:true,
+                navigation:true,
+                anchors:["one","two","three","four","five"],
+                menu:true,
+                onLeave:function(index,nextindex,direction){
+                    if(index == 2 && direction == 'up'){
+                        $mlNav.animate({
+                            top:60
+                        },500);
+                    }else{
+                        $mlNav.animate({
+                            top:0
+                        },500);
+                    }
+                    if(index == 3){
+                        $(".title_ex").remove();
+                        $("#about_ul").fadeOut(500);
+                        $("#about_p").slideUp(500);
+                    }
+                    if(index == 4){
+                        $('.title_ex').remove();
+                    }
+                },
+                afterLoad:function(anchorLink,index){
+                    if(index == 3){
+                        $(".title_p").after("<div class='title_ex'><p>·ABOUT ME·</p></div>");
+                        $(".title_ex").animate({width:"200px"},1000,function(){
+                            $(".title_ex p").slideDown(500);
+                        $("#about_ul").fadeIn(500);
+                        $("#about_p").slideDown(500);
+                        })
+                    };
+                    if(index == 4){
+                        $(".title_p").after("<div class='title_ex'><p>·SKILL·</p></div>");
+                        $('.title_ex').animate({width:"200px"},1000,function(){
+                            $(".title_ex p").slideDown(500);
+                        })
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class="mlNav">
+    <div class="center-wrap clearFix">
+        <div id="logo">
+            <div id="ml_logo"><img src="img/logo3.jpg" alt=""></div>
+            <div id="ml_p">
+                <p id="ml_p1">DD</p>
+                <p id="ml_p2">个人简历</p>
+            </div>
+            <script>
+                $("#ml_p").hover(function(){
+                    $("#ml_p1").html("Resume");
+                    $("#ml_p2").html("前端工程师")
+                },function(){
+                    $("#ml_p1").html("DD");
+                    $("#ml_p2").html("个人简历")
+                })
+            </script>
+        </div>
+        <ul>
+            <li><a href="#two">首页</a></li>
+            <li><a href="#three">个人简介</a></li>
+            <li><a href="#four">专业技能</a></li>
+            <li><a href="#five">部分Demo</a></li>
+        </ul>
+        <a class="download" href="javascript:">立即下载简历</a>
+    </div>
+</div>
+
+<div id="dowebok">
+    <div class="section fp-auto-height">
+        <div  class="nav" style="height: 60px;">
+            <div class="logo">
+                <a href="DD1.html"><img src="img/logo.png" width="100px" height="50px"></a></div>
+            <ul class="nav-ul">
+                <li><a href="DD1.html">首页</a></li>
+                <li><a class="sorry" href="">随意写写</a></li>
+                <li><a class="sorry" href="">关于我</a></li>
+            </ul>
+        </div>
+        <script>
+            $(function(){
+                $('.sorry').click(function(){
+                    alert("sorry!!部分功能尚未完善，敬请期待!!!")
+                })
+            })
+        </script>
+    </div>
+    <div class="section active">
+        <div id="index">
+            <div id="index_img">
+                <div id="photo1"  style="display: block">
+                <img src="img/logo2.jpg" alt=""  width="190" height="180">
+                </div>
+                <div id="photo2"  style="display: none">
+                <img src="img/logo1.jpg" alt=""  width="190" height="180">
+                </div>
+                <script>
+                    $("#index_img").hover(function(){
+                        $("#photo1").hide();
+                        $("#photo2").show();
+                    },function(){
+                        $("#photo1").show();
+                        $("#photo2").hide();
+                    });
+                </script>
+            </div>
+            <div id="index_content">
+                <p id="index_news1">人活着都要为“明天”而奋斗。明天过了还会有无数的明天等着你去创！</p>
+                <div id="index_news_box">
+                        <p id="index_news2">邓达</p>
+                        <p id="index_news3">今年23岁</p>
+                        <p id="index_news4">我想成为一名实习前端工程师</p>
+                        <p id="index_news5">1005745397@qq.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div id="about">
+            <div class="title">
+                <p class="title_p">个人简介</p>
+            </div>
+            <div id="about_content">
+                <div id="about_ul">
+                    <ul>
+                        <li><span>姓名</span>&nbsp;&nbsp;|&nbsp;&nbsp;邓达</li>
+                        <li><span>坐标</span>&nbsp;&nbsp;|&nbsp;&nbsp;广州</li>
+                        <li><span>学历</span>&nbsp;&nbsp;|&nbsp;&nbsp;本科</li>
+                        <li><span>电话</span>&nbsp;&nbsp;|&nbsp;&nbsp;13502468549</li>
+                        <li><span>邮箱</span>&nbsp;&nbsp;|&nbsp;&nbsp;1005745397@qq.com</li>
+                    </ul>
+                </div>
+                <div id="about_p">
+                    <p> 我是一个做事认真负责，性格随和有时间观念的人，<br>
+                        2016年毕业于广东工业大学信息管理与信息系统专业<br>
+                        学校学的是Java和Jsp，我对那些制作精美的前端页面尤其敬佩和喜爱，
+                        从此爱上了html5这一门前端语言。<br>
+                        到现在已有半年的学习开发经验了，熟悉html5，javascript，css3，能够熟练开发出适合W3C标准的页面，<br>
+                        现在还在慢慢地自学着用node.js和mongodb来开发后端和服务器。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div id="skill">
+            <div class="title">
+                <p class="title_p">专业技能</p>
+            </div>
+            <div class="slide">
+                <ul class="slide_main">
+                    <li class="slide_panel"><img src="img/1.jpg" alt=""></li>
+                    <li class="slide_panel"><img src="img/2.jpg" alt=""></li>
+                    <li class="slide_panel"><img src="img/3.jpg" alt=""></li>
+                </ul>
+                <div class="slide_box">
+                    <ul class="slide_nav">
+                        <li class="slide_item">1</li>
+                        <li class="slide_item">2</li>
+                        <li class="slide_item">3</li>
+                    </ul>
+                    <div class="slide_page">
+                        <a href="javascript:;;" class="slide_pre"><</a>
+                        <a href="javascript:;;" class="slide_next">></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="section fp-auto-height">
+        <div  class="footer" style="height: 60px;">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo3.jpg" width="100px" height="50px"></a></div>
+            <ul class="footer-ul">
+                <li><a href="javascript:">商城详情</a></li>
+                <li><a href="javascript:">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
